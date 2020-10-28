@@ -1,7 +1,7 @@
 function memo() {
-  const subimit = document.getElementById("submit");
-  subimit.addEventListener("click",(e) => {});
-  const formData = new FormData(document.getElementById("form"));
+  const submit = document.getElementById("submit");
+  submit.addEventListener("click", (e) => {
+   const formData = new FormData(document.getElementById("form"));
    const XHR = new XMLHttpRequest();
    XHR.open("POST", "/posts", true);
    XHR.responseType = "json";
@@ -27,6 +27,6 @@ function memo() {
     formText.value = "";
   };
   e.preventDefault();
-　});
-}
+  });
+　};
 window.addEventListener("load",memo)
